@@ -1,0 +1,21 @@
+{
+  "name": "listen-together",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc && node ./lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreeharsha-pro/listen-together.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sreeharsha-pro/listen-together/issues"
+  },
+  "homepage": "https://github.com/sreeharsha-pro/listen-together#readme"
+}
