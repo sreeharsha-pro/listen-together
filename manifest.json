@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3, 
+  "name": "Music Sync", 
+  "version": "1.0",
+  "description": "Syncs music playback between browsers",
+  "permissions": ["storage"], 
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*", "*://*.spotify.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/*",
+    "https://*.spotify.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
