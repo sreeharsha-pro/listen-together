@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc && node ./lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx tsc && cp manifest.json lib/ && node ./lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "node --inspect ./lib/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,11 @@
   },
   "homepage": "https://github.com/sreeharsha-pro/listen-together#readme",
   "devDependencies": {
-    "@types/chrome": "^0.0.308"
+    "@types/chrome": "^0.0.308",
+    "@types/ws": "^8.18.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ws": "^8.18.1"
   }
 }
