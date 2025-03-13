@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc && cp manifest.json lib/ && node ./lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "node --inspect ./lib/index.js"
+    "build": "npx tsc && webpack --config webpack.config.ts",
+    "start": "npm run build && cp manifest.json lib/ && node lib/index.js ",
+    "watch": "webpack --config webpack.config.ts --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,12 @@
   "homepage": "https://github.com/sreeharsha-pro/listen-together#readme",
   "devDependencies": {
     "@types/chrome": "^0.0.308",
-    "@types/ws": "^8.18.0"
+    "@types/copy-webpack-plugin": "^8.0.1",
+    "@types/ws": "^8.18.0",
+    "copy-webpack-plugin": "^13.0.0",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "webpack-cli": "^6.0.1"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
