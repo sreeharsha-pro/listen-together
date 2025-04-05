@@ -25,6 +25,7 @@ function sendMessageToTabs(message: { event: string; currentTime?: number }) {
   }
 
 function connectWebSocket() {
+  console.log(process.env.PORT)
   ws = new WebSocket(`ws://localhost:${process.env.PORT}`);
 
   ws.onopen = () => console.log("✅ Connected to WebSocket server");
