@@ -4,6 +4,9 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+import { signInAnon } from './firebase/auth';
+signInAnon();
+
 const wss = new WebSocketServer({ port: Number(process.env.PORT) });
 
 wss.on("connection", (ws: WebSocket) => {
